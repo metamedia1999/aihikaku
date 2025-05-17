@@ -1,0 +1,231 @@
+/* App.css - 追加のグローバルスタイル */
+
+/* レスポンシブテーブル */
+.responsive-table {
+  @apply w-full border-collapse;
+}
+
+.responsive-table th {
+  @apply bg-neutral-200 text-left p-3 font-semibold text-neutral-800;
+}
+
+.responsive-table td {
+  @apply border-t border-neutral-300 p-3;
+}
+
+.responsive-table tr:hover {
+  @apply bg-neutral-100;
+}
+
+/* レーティングスター */
+.rating {
+  @apply flex items-center;
+}
+
+.rating-star {
+  @apply text-yellow-400 text-xl;
+}
+
+.rating-star-empty {
+  @apply text-neutral-300 text-xl;
+}
+
+.rating-number {
+  @apply ml-2 font-medium text-neutral-700;
+}
+
+/* サービスカード */
+.service-card {
+  @apply transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.service-card:hover .service-card-title {
+  @apply text-primary;
+}
+
+/* タブナビゲーション */
+.tab-nav {
+  @apply flex border-b border-neutral-300 mb-6;
+}
+
+.tab-nav-item {
+  @apply px-4 py-3 font-medium text-neutral-700 border-b-2 border-transparent cursor-pointer;
+}
+
+.tab-nav-item.active {
+  @apply text-primary border-primary;
+}
+
+/* ロード状態 */
+.loading-spinner {
+  @apply border-t-4 border-primary rounded-full animate-spin w-8 h-8;
+}
+
+/* タグ */
+.tag {
+  @apply inline-block px-3 py-1 text-sm rounded-full bg-neutral-200 text-neutral-700 mr-2 mb-2;
+}
+
+.tag:hover {
+  @apply bg-primary text-white;
+}
+
+/* ヒーローセクション */
+.hero-section {
+  @apply bg-gradient-to-r from-primary to-blue-600 text-white py-16 md:py-24;
+}
+
+/* フィルター */
+.filter-group {
+  @apply mb-6 border-b border-neutral-200 pb-4;
+}
+
+.filter-group-title {
+  @apply font-semibold text-neutral-800 mb-3;
+}
+
+.filter-option {
+  @apply flex items-center mb-2;
+}
+
+.filter-checkbox {
+  @apply mr-2 h-4 w-4 text-primary focus:ring-primary;
+}
+
+/* 管理画面 */
+.admin-layout {
+  @apply flex;
+}
+
+.admin-sidebar {
+  @apply w-64 bg-neutral-800 text-white min-h-screen p-4;
+}
+
+.admin-content {
+  @apply flex-1 p-6 bg-neutral-100;
+}
+
+.admin-nav-item {
+  @apply block py-2 px-4 rounded hover:bg-neutral-700 mb-1;
+}
+
+.admin-nav-item.active {
+  @apply bg-primary text-white;
+}
+
+/* モーダル */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center;
+}
+
+.modal-content {
+  @apply bg-white rounded-xl shadow-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto;
+}
+
+.modal-header {
+  @apply flex justify-between items-center mb-4 pb-2 border-b border-neutral-200;
+}
+
+.modal-close {
+  @apply text-neutral-500 hover:text-neutral-800;
+}
+
+/* フォーム */
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-neutral-700 font-medium mb-1;
+}
+
+.form-input {
+  @apply w-full p-2 border border-neutral-300 rounded-lg focus:ring focus:ring-primary-light focus:outline-none;
+}
+
+.form-error {
+  @apply text-red-500 text-sm mt-1;
+}
+
+/* アップローダー */
+.uploader {
+  @apply border-2 border-dashed border-neutral-300 rounded-lg p-4 text-center cursor-pointer hover:border-primary;
+}
+
+.uploader-active {
+  @apply border-primary bg-primary bg-opacity-5;
+}
+
+/* 比較テーブル */
+.compare-table {
+  @apply w-full border-collapse;
+}
+
+.compare-table th {
+  @apply bg-neutral-200 text-left p-3 font-semibold text-neutral-800 sticky top-0;
+}
+
+.compare-table td {
+  @apply border-t border-neutral-300 p-3;
+}
+
+.compare-table tr:nth-child(even) {
+  @apply bg-neutral-50;
+}
+
+.compare-feature-yes {
+  @apply text-green-600;
+}
+
+.compare-feature-no {
+  @apply text-red-500;
+}
+
+/* マークダウン */
+.markdown h1 {
+  @apply text-3xl font-bold mb-4 mt-6;
+}
+
+.markdown h2 {
+  @apply text-2xl font-bold mb-3 mt-5;
+}
+
+.markdown h3 {
+  @apply text-xl font-bold mb-2 mt-4;
+}
+
+.markdown p {
+  @apply mb-4;
+}
+
+.markdown ul, .markdown ol {
+  @apply mb-4 ml-5;
+}
+
+.markdown ul {
+  @apply list-disc;
+}
+
+.markdown ol {
+  @apply list-decimal;
+}
+
+.markdown li {
+  @apply mb-1;
+}
+
+.markdown a {
+  @apply text-primary hover:underline;
+}
+
+.markdown blockquote {
+  @apply pl-4 border-l-4 border-neutral-300 text-neutral-700 italic my-4;
+}
+
+.markdown code {
+  @apply bg-neutral-100 px-1 rounded font-mono text-sm;
+}
+
+.markdown pre {
+  @apply bg-neutral-800 text-white p-4 rounded-lg overflow-x-auto my-4 font-mono text-sm;
+}
