@@ -54,7 +54,11 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7  # 1週間
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 
 # メインアプリの作成
-app = FastAPI(title="AI比較.com API")
+app = FastAPI(
+    title="AI比較.com API",
+    docs_url="/api/docs",
+    openapi_url="/api/openapi.json"
+)
 
 # CORS設定
 ALLOWED_ORIGINS_STRING = os.environ.get("ALLOWED_ORIGINS", "http://localhost:3000")
